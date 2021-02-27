@@ -11,12 +11,16 @@
     <table class="table table-striped">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Name</th>
+                <th>Description</th>
             </tr>
         </thead>
         <!--or do a block instead of the tr and lis inside-->
         <tr th:each="event : ${events}">
-            <td th:text="${event}"></td>
+            <td th:text="${event.getID()}"></td>
+            <td th:text="${event.getName()}"></td>
+            <td th:text="${event.getDescription()}"></td>
         </tr>
     </table>
 </body>
